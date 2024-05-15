@@ -1,10 +1,10 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./app";
-import "./index.css";
+import { Providers } from "./app/providers";
+import { router } from "./app/router";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const rootElement = document.getElementById("root")!;
+
+if (!rootElement.innerHTML) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(<Providers router={router} />);
+}
