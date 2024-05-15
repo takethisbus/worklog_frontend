@@ -1,7 +1,7 @@
 import { API } from "../base";
 import { CreateNoteResponse, Note, NotePayload } from "./models";
 
-const BASE_URL = "/api/v2/notes";
+const BASE_URL = "/api/v1/notes";
 
 export const notes = {
   get: () => API.get<Note[]>(BASE_URL),

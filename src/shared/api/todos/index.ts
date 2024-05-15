@@ -1,7 +1,7 @@
 import { API } from "../base";
 import { CreateTodoResponse, Todo, TodoPayload } from "./models";
 
-const BASE_URL = "/api/v2/todos";
+const BASE_URL = "/api/v1/todos";
 
 export const todos = {
   get: () => API.get<Todo[]>(BASE_URL),
