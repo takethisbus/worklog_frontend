@@ -8,7 +8,7 @@ export const todos = {
   create: (payload: TodoPayload) =>
     API.post<CreateTodoResponse>(BASE_URL, payload),
   getDetail: (id: Todo["id"]) => API.get<Todo>(`${BASE_URL}/${id}`),
-  putDetail: (id: Todo["id"], payload: TodoPayload) =>
+  updateDetail: (id: Todo["id"], payload: TodoPayload) =>
     API.put<CreateTodoResponse>(`${BASE_URL}/${id}`, payload),
   deleteDetail: (id: Todo["id"]) => API.delete<boolean>(`${BASE_URL}/${id}`)
 };

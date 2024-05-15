@@ -1,20 +1,22 @@
 import { AxiosError, AxiosResponse } from "axios";
-import { ErrorResponse } from "./models";
+import { ErrorResponse, ValidationError } from "./models";
 
 export const responseInterceptors = <T>(response: AxiosResponse<T>) =>
   response.data;
 
-export const rejectInterceptors = (error: AxiosError<ErrorResponse>) => {
+export const rejectInterceptors = (
+  error: AxiosError<ErrorResponse<unknown>>
+) => {
   const { data, status } = error.response!;
   switch (status) {
     case 404:
       console.error("Not Found");
-      Promise.reject(data.detail);
+      Promise.reject(data.detail as AxiosError<ErrorResponse<string>>);
       break;
 
     case 422:
       console.error("Validation Error");
-      Promise.reject(data.detail);
+      Promise.reject(data.detail as AxiosError<ErrorResponse<ValidationError>>);
       break;
 
     case 500:

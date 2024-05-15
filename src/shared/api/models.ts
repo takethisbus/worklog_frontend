@@ -1,9 +1,9 @@
-interface Error {
+export interface ValidationError {
   loc: [string, number];
   msg: string;
   type: string;
 }
 
-export interface ErrorResponse {
-  detail: Error[] | string;
+export interface ErrorResponse<T> {
+  detail: T;
 }
