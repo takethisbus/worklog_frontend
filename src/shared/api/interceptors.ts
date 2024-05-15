@@ -2,7 +2,7 @@ import { AxiosError, AxiosResponse } from "axios";
 import { ErrorResponse, ValidationError } from "./models";
 
 export const responseInterceptors = <T>(response: AxiosResponse<T>) =>
-  response.data;
+  response.data as T;
 
 export const rejectInterceptors = (
   error: AxiosError<ErrorResponse<unknown>>
