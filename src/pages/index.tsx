@@ -1,7 +1,7 @@
+import { TodoForm } from "@/features/todos/add";
+import { TodoList } from "@/features/todos/list";
 import { Layout } from "@/widgets/layout";
 import { Box } from "@mui/material";
-import { TodoForm } from "@/entities/todos/ui/form";
-import { TodoList } from "@/features/todo-list";
 
 export const Home = () => {
   return (
