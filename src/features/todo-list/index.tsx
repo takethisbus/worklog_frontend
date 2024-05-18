@@ -1,7 +1,7 @@
-import { TodoItem } from "../item";
-import { useTodo } from "../../models/todos";
+import { TodoItem } from "../../entities/todos/ui/item";
+import { useTodo } from "../../entities/todos/models/todos";
 import { Empty } from "@/shared/ui/Empty";
-import { DeleteButton } from "../delete";
+import { DeleteButton } from "../../entities/todos/ui/delete";
 import { List, ListItem } from "@mui/material";
 
 export const TodoList = () => {

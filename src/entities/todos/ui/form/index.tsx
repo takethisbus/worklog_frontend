@@ -4,7 +4,7 @@ import { grey } from "@mui/material/colors";
 import { useCreateTodo } from "../../models/todos";
 import { FormEvent, useState } from "react";
 
-export const InputBox = () => {
+export const TodoForm = () => {
   const { mutate } = useCreateTodo();
   const [value, setValue] = useState("");
   return (
@@ -20,11 +20,9 @@ export const InputBox = () => {
       component="form"
       onSubmit={(event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        const title = formData.get("title")?.toString() || "";
 
         mutate(
-          { title, completed: false },
+          { title: value, completed: false },
           {
             onSuccess: () => {
               setValue("");

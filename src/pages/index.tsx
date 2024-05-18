@@ -1,7 +1,7 @@
 import { Layout } from "@/widgets/layout";
 import { Box } from "@mui/material";
-import { InputBox } from "@/entities/todos/ui/inputBox";
-import { TodoList } from "@/entities/todos/ui/list";
+import { TodoForm } from "@/entities/todos/ui/form";
+import { TodoList } from "@/features/todo-list";
 
 export const Home = () => {
   return (
@@ -17,7 +17,7 @@ export const Home = () => {
           }}
         >
           <TodoList />
-          <InputBox />
+          <TodoForm />
         </Box>
       </Layout.Content>
     </Layout>
