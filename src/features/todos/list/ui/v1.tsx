@@ -1,7 +1,7 @@
 import { Empty } from "@/shared/ui/Empty";
 import { List, ListItem } from "@mui/material";
 import { TodoItem } from "@/entities/todos/ui/item";
-import { ViewModel } from "../model";
+import { ViewModel } from "../model/viewModel_v1";
 import { TodoDeleteButton } from "../../delete";
 
 export const TodoList = (model: ViewModel) => {
@@ -18,6 +18,7 @@ export const TodoList = (model: ViewModel) => {
             justifyContent: "space-between",
             alignItems: "center"
           }}
+          sx={{ padding: "8px 0" }}
           key={id}
         >
           <TodoItem
