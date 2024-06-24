@@ -1,17 +1,7 @@
 import { Logo } from "@/shared/ui/Logo";
-import {
-  Box,
-  Divider,
-  Grid,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  ListSubheader,
-  Typography
-} from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { DateList } from "./items";
 
 export const LeftSideBar = () => {
   return (
@@ -37,23 +27,7 @@ export const LeftSideBar = () => {
         </Typography>
       </Box>
       <Divider />
-      <List
-        sx={{ width: "100%", bgcolor: "background.paper", p: 2 }}
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-        subheader={
-          <ListSubheader component="h6" id="nested-list-subheader">
-            Summary
-          </ListSubheader>
-        }
-      >
-        <ListItemButton sx={{ borderRadius: 2 }}>
-          <ListItemIcon sx={{ minWidth: 28 }}>
-            <FiberManualRecordIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText secondary="2011-11-11" />
-        </ListItemButton>
-      </List>
+      <DateList />
     </Grid>
   );
 };
