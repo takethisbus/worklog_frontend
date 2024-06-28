@@ -11,8 +11,13 @@ export const TodoForm = (model: ViewModel) => {
       flexDirection="column"
       gap={2}
       sx={{
+        position: "sticky",
+        bottom: 40,
+        zIndex: 1,
         border: `1px solid ${grey[300]}`,
         borderRadius: 4,
+        boxShadow: "1px 1px 10px rgba(0,0,0,0.1)",
+        backgroundColor: "white",
         p: 2
       }}
       component="form"

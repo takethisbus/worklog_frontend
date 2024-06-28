@@ -5,9 +5,11 @@ export type ViewModel = ReturnType<typeof useViewModelV2>;
 
 const useTodosByCreatedAt = () => {
   const { todos } = useTodo();
-  const groupBy = new Todo(todos);
+  const todoController = new Todo(todos);
 
-  return { todos: groupBy.groupByCreatedAt() };
+  const sortedData = todoController.sortDataByDate("내림차순");
+
+  return { todos: todoController.groupByCreatedAt(sortedData) };
 };
 
 export const useViewModelV2 = () => {

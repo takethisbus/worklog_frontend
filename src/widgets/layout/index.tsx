@@ -4,14 +4,31 @@ import { LeftSideBar } from "../lsb";
 
 const Content = ({ children }: PropsWithChildren) => {
   return (
-    <Grid item xs={9}>
+    <Grid
+      item
+      xs={9}
+      sx={{
+        maxHeight: "100vh",
+        overflow: "auto"
+      }}
+    >
       {children}
     </Grid>
   );
 };
 
 export const Layout = ({ children }: PropsWithChildren) => {
-  return <Grid container>{children}</Grid>;
+  return (
+    <Grid
+      container
+      sx={{
+        maxHeight: "100vh",
+        overflow: "hidden"
+      }}
+    >
+      {children}
+    </Grid>
+  );
 };
 
 Layout.Lsb = LeftSideBar;

@@ -11,7 +11,8 @@ export const LeftSideBar = () => {
       sx={{
         borderRight: `1px solid ${grey[300]}`,
         height: "100vh",
-        width: 250
+        width: 250,
+        overflow: "auto"
       }}
     >
       <Box
