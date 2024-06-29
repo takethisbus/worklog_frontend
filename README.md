@@ -14,6 +14,12 @@ yarn install
 yarn dev
 ```
 
+### 테스트
+
+```cli
+yarn test
+```
+
 ### 로컬 빌드
 
 ```cli
