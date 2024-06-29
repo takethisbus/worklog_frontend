@@ -1,5 +1,5 @@
 import { TodoDate } from "@/entities/todos/models/todoDate";
-import { useTodo, useUpdateTodo } from "@/entities/todos/models/todos";
+import { useTodo } from "@/entities/todos/models/todos";
 
 export type ViewModel = ReturnType<typeof useViewModelV2>;
 
@@ -14,7 +14,6 @@ const useTodosByCreatedAt = () => {
 
 export const useViewModelV2 = () => {
   return {
-    ...useTodosByCreatedAt(),
-    ...useUpdateTodo()
+    ...useTodosByCreatedAt()
   };
 };

@@ -1,8 +1,20 @@
 import { Empty } from "@/shared/ui/Empty";
 import { List, ListItem, Typography } from "@mui/material";
 import { ViewModel } from "../model/viewModel_v2";
-import { TodoList } from "./v1";
+import { ViewModel as ViewModelV1 } from "../model/viewModel_v1";
 import { grey } from "@mui/material/colors";
+import { Todo } from "@/shared/api/todos/models";
+import { TodoListItem } from "./item";
+
+const TodoList = (model: ViewModelV1) => {
+  return (
+    <List>
+      {model.todos.map((item) => (
+        <TodoListItem {...item} />
+      ))}
+    </List>
+  );
+};
 
 export const TodoByDate = ({ todos, ...props }: ViewModel) => {
   if (!todos.length) {
@@ -34,7 +46,7 @@ export const TodoByDate = ({ todos, ...props }: ViewModel) => {
             >
               {date}
             </Typography>
-            <TodoList todos={todo[date]} {...props} />
+            <TodoList todos={todo[date] as Todo[]} {...props} />
           </ListItem>
         );
       })}

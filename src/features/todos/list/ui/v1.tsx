@@ -1,8 +1,7 @@
 import { Empty } from "@/shared/ui/Empty";
-import { List, ListItem } from "@mui/material";
-import { TodoItem } from "@/entities/todos/ui/item";
+import { List } from "@mui/material";
 import { ViewModel } from "../model/viewModel_v1";
-import { TodoDeleteButton } from "../../delete";
+import { TodoListItem } from "./item";
 
 export const TodoList = (model: ViewModel) => {
   if (!model.todos.length) {
@@ -12,27 +11,7 @@ export const TodoList = (model: ViewModel) => {
   return (
     <List>
       {model.todos.map(({ completed, title, id }) => (
-        <ListItem
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center"
-          }}
-          sx={{ padding: "8px 0" }}
-          key={id}
-        >
-          <TodoItem
-            completed={completed}
-            title={title}
-            onChange={(event) =>
-              model.mutate({
-                id,
-                payload: { title, completed: event.target.checked }
-              })
-            }
-          />
-          <TodoDeleteButton id={id} />
-        </ListItem>
+        <TodoListItem completed={completed} title={title} id={id} />
       ))}
     </List>
   );

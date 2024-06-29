@@ -1,10 +1,11 @@
 import { Box } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import { TodoInput } from "./input";
+import { ViewModel } from "../model";
+import { TodoInput } from "@/features/todos/add/ui/input";
+import { NoteInput } from "@/features/notes/list/ui/input";
 import { AddButton } from "./button";
-import { ViewModel } from "../../model";
 
-export const TodoForm = (model: ViewModel) => {
+export const AddItemForm = (model: ViewModel) => {
   return (
     <Box
       display="flex"
@@ -23,7 +24,8 @@ export const TodoForm = (model: ViewModel) => {
       component="form"
       onSubmit={model.onSubmit}
     >
-      <TodoInput value={model.value} onChange={model.onChange} />
+      <TodoInput />
+      <NoteInput />
       <AddButton />
     </Box>
   );

@@ -4,11 +4,12 @@ import { CreateNoteResponse, Note, NotePayload } from "./models";
 const BASE_URL = "/api/v1/notes";
 
 export const notes = {
-  get: () => API.get<Note[]>(BASE_URL),
+  get: () => API.get<null, Note[]>(BASE_URL),
   create: (payload: NotePayload) =>
-    API.post<CreateNoteResponse>(BASE_URL, payload),
+    API.post<NotePayload, CreateNoteResponse>(BASE_URL, payload),
   getDetail: (id: Note["id"]) => API.get<Note>(`${BASE_URL}/${id}`),
-  updateDetail: (id: Note["id"], payload: NotePayload) =>
-    API.put<CreateNoteResponse>(`${BASE_URL}/${id}`, payload),
-  deleteDetail: (id: Note["id"]) => API.delete<boolean>(`${BASE_URL}/${id}`)
+  updateDetail: ({ id, payload }: { id: Note["id"]; payload: NotePayload }) =>
+    API.put<NotePayload, CreateNoteResponse>(`${BASE_URL}/${id}`, payload),
+  deleteDetail: (id: Note["id"]) =>
+    API.delete<null, boolean>(`${BASE_URL}/${id}`)
 };
