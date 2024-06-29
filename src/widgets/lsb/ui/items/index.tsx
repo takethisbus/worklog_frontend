@@ -7,11 +7,12 @@ import {
 } from "@mui/material";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { useTodo } from "@/entities/todos/models/todos";
-import { Todo } from "@/features/todos/list/model/todos";
+import { TodoDate } from "@/entities/todos/models/todoDate";
+import { scrollToElement } from "../../model/scrollToElement";
 
 export const DateList = () => {
   const { todos } = useTodo();
-  const todoController = new Todo(todos);
+  const todoController = new TodoDate(todos);
   const sortied = todoController.sortDataByDate("내림차순");
   const grouped = todoController.groupByCreatedAt(sortied);
   const dates = grouped.map((item) => Object.keys(item).at(0));
@@ -29,7 +30,16 @@ export const DateList = () => {
     >
       {dates.length ? (
         dates.map((item) => (
-          <ListItemButton key={item} sx={{ borderRadius: 2 }}>
+          <ListItemButton
+            key={item}
+            sx={{ borderRadius: 2 }}
+            onClick={() => {
+              const element = document.querySelector(`.${item}`);
+              if (element instanceof HTMLElement) {
+                scrollToElement(element);
+              }
+            }}
+          >
             <ListItemIcon sx={{ minWidth: 28 }}>
               <FiberManualRecordIcon fontSize="small" />
             </ListItemIcon>

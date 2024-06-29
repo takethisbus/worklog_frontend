@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { PropsWithChildren } from "react";
-import { LeftSideBar } from "../lsb";
+import { LeftSideBar } from "../lsb/ui";
 
 const Content = ({ children }: PropsWithChildren) => {
   return (

@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { TODO_MOCK } from "@/entities/todos/models/mock";
-import { Todo } from "./todos";
+import { TodoDate } from "./todoDate";
 
 describe("TodoGroupBy", () => {
-  const todoController = new Todo(TODO_MOCK);
+  const todoController = new TodoDate(TODO_MOCK);
 
   it("groupByCreatedAt: 생성 날짜에 따라 객체가 구성되어야한다", () => {
     expect(todoController.groupByCreatedAt(TODO_MOCK)).toEqual([

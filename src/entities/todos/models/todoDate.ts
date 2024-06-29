@@ -1,17 +1,17 @@
-import type { Todo as TodoType } from "@/shared/api/todos/models";
+import type { Todo } from "@/shared/api/todos/models";
 import dayjs from "dayjs";
 
 interface GroupedTodo {
-  [key: string]: TodoType[];
+  [key: string]: Todo[];
 }
 
-export class Todo {
-  todos: TodoType[];
-  constructor(todos: TodoType[]) {
+export class TodoDate {
+  todos: Todo[];
+  constructor(todos: Todo[]) {
     this.todos = todos;
   }
 
-  public groupByCreatedAt(data: TodoType[]): { [key: string]: TodoType[] }[] {
+  public groupByCreatedAt(data: Todo[]): GroupedTodo[] {
     const grouped = data.reduce<GroupedTodo>((acc, currTodo) => {
       const date = dayjs(currTodo.created_date).format("YYYY-MM-DD");
 
