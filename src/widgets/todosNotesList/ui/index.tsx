@@ -52,9 +52,11 @@ export const TodoWithNote = ({ todosNotes, ...props }: ViewModel) => {
             }}
           >
             <Typography
+              className={`date-${date}`}
               variant="body1"
               component="h5"
               sx={{
+                scrollMargin: "40px",
                 fontWeight: "medium",
                 paddingBottom: "4px",
                 borderBottom: `1px solid ${grey[300]}`

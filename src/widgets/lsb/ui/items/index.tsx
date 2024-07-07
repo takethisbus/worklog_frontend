@@ -34,7 +34,7 @@ export const DateList = () => {
             key={item}
             sx={{ borderRadius: 2 }}
             onClick={() => {
-              const element = document.querySelector(`.${item}`);
+              const element = document.querySelector(`.date-${item}`);
               if (element instanceof HTMLElement) {
                 scrollToElement(element);
               }

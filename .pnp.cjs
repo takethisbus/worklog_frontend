@@ -50,6 +50,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-refresh", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:0.4.7"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:18.3.1"],\
+          ["react-toastify", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:10.0.5"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
           ["vite", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:5.2.11"],\
           ["vite-tsconfig-paths", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:4.3.2"],\
@@ -4757,6 +4758,33 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-toastify", [\
+      ["npm:10.0.5", {\
+        "packageLocation": "../../../.yarn/berry/cache/react-toastify-npm-10.0.5-86b63c99fc-10c0.zip/node_modules/react-toastify/",\
+        "packageDependencies": [\
+          ["react-toastify", "npm:10.0.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:10.0.5", {\
+        "packageLocation": "./.yarn/__virtual__/react-toastify-virtual-61d84cc463/4/.yarn/berry/cache/react-toastify-npm-10.0.5-86b63c99fc-10c0.zip/node_modules/react-toastify/",\
+        "packageDependencies": [\
+          ["react-toastify", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:10.0.5"],\
+          ["@types/react", "npm:18.3.2"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["clsx", "npm:2.1.1"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-transition-group", [\
       ["npm:4.4.5", {\
         "packageLocation": "../../../.yarn/berry/cache/react-transition-group-npm-4.4.5-98ea4ef96e-10c0.zip/node_modules/react-transition-group/",\
@@ -5682,6 +5710,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-refresh", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:0.4.7"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:18.3.1"],\
+          ["react-toastify", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:10.0.5"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"],\
           ["vite", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:5.2.11"],\
           ["vite-tsconfig-paths", "virtual:f276b01446754ce90358669a80b5904cea620e9c6fffdefbe6836c02304e20dc4f6a947b3e2d74189bb173d4a398b982058109ab3f92eb4b580239723064ce7b#npm:4.3.2"],\

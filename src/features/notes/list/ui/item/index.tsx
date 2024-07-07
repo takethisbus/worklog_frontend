@@ -1,4 +1,4 @@
-import { Box, ListItem, Typography, debounce } from "@mui/material";
+import { Box, ListItem, debounce } from "@mui/material";
 import { grey } from "@mui/material/colors";
 
 import { NoteDeleteButton } from "../../../delete";
@@ -35,9 +35,6 @@ export const NoteListItem = ({ title, id }: Props) => {
         padding: 16
       }}
     >
-      <Typography variant="body2" color={grey[500]} sx={{ marginBottom: 1 }}>
-        메모
-      </Typography>
       <Box
         sx={{
           width: "100%",
